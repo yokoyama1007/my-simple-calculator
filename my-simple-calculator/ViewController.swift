@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    //演算子
+    @IBAction func operators(_ sender: UIButton) {
+        
+    }
+    
+    //数字
+    @IBAction func numbers(_ sender: UIButton) {
+        resultLabel.text = String(sender.tag-1)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
 }
 

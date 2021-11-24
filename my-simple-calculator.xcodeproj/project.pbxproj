@@ -13,6 +13,7 @@
 		38CAC6CE274E36B600D4C4EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CAC6CC274E36B600D4C4EE /* Main.storyboard */; };
 		38CAC6D0274E36B800D4C4EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38CAC6CF274E36B800D4C4EE /* Assets.xcassets */; };
 		38CAC6D3274E36B800D4C4EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CAC6D1274E36B800D4C4EE /* LaunchScreen.storyboard */; };
+		C494A8FF9D6E100D2A899A91 /* Pods_my_simple_calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A9C119B5C466243DF0BCA8 /* Pods_my_simple_calculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		38CAC6CF274E36B800D4C4EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38CAC6D2274E36B800D4C4EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38CAC6D4274E36B800D4C4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A58413E48FFC7615B4C7256 /* Pods-my-simple-calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my-simple-calculator.release.xcconfig"; path = "Target Support Files/Pods-my-simple-calculator/Pods-my-simple-calculator.release.xcconfig"; sourceTree = "<group>"; };
+		90A9C119B5C466243DF0BCA8 /* Pods_my_simple_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_my_simple_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D17491A6717F6F144B2D9B /* Pods-my-simple-calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my-simple-calculator.debug.xcconfig"; path = "Target Support Files/Pods-my-simple-calculator/Pods-my-simple-calculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C494A8FF9D6E100D2A899A91 /* Pods_my_simple_calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				38CAC6C5274E36B600D4C4EE /* my-simple-calculator */,
 				38CAC6C4274E36B600D4C4EE /* Products */,
+				8ADC6C4895635B446FCBC43A /* Pods */,
+				456BDF02FF13E2F563BF004D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "my-simple-calculator";
 			sourceTree = "<group>";
 		};
+		456BDF02FF13E2F563BF004D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90A9C119B5C466243DF0BCA8 /* Pods_my_simple_calculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8ADC6C4895635B446FCBC43A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2D17491A6717F6F144B2D9B /* Pods-my-simple-calculator.debug.xcconfig */,
+				7A58413E48FFC7615B4C7256 /* Pods-my-simple-calculator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38CAC6D7274E36B800D4C4EE /* Build configuration list for PBXNativeTarget "my-simple-calculator" */;
 			buildPhases = (
+				5113D2951BF31C5A5767E521 /* [CP] Check Pods Manifest.lock */,
 				38CAC6BF274E36B600D4C4EE /* Sources */,
 				38CAC6C0274E36B600D4C4EE /* Frameworks */,
 				38CAC6C1274E36B600D4C4EE /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5113D2951BF31C5A5767E521 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-my-simple-calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		38CAC6BF274E36B600D4C4EE /* Sources */ = {
@@ -284,6 +334,7 @@
 		};
 		38CAC6D8274E36B800D4C4EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D17491A6717F6F144B2D9B /* Pods-my-simple-calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +345,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +363,7 @@
 		};
 		38CAC6D9274E36B800D4C4EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A58413E48FFC7615B4C7256 /* Pods-my-simple-calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,6 +374,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
